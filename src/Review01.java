@@ -19,15 +19,19 @@ public class Review01 {
     public static int tax(int price) {
 
         // 消費税率(%)
-        int taxRate = 10;
+        //int taxRate = 10;
+        double taxRate = 10;
+
         // 処理結果
-        int result;
+        //int result;
 
         // 消費税額の演算結果をdouble型変数に代入
-        double taxCalculation = price * ((double) taxRate / 100);
+        //double taxCalculation = price * ((double) taxRate / 100);
+        // 課題アドバイスの修正 演算結果を直接int型変数に代入
+        int result = (int)(price * ( taxRate / 100 ));
 
         // double型の消費税額をint型にキャストし、int型の処理結果変数に代入
-        result = (int) taxCalculation;
+        //result = (int) taxCalculation;
 
         return result;
     }
